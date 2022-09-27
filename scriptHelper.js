@@ -58,6 +58,9 @@ function formSubmission(documentt, list, pilot, copilot, fuelLevel, cargoLevel) 
         event.preventDefault();
         return;
     }
+    documentt.querySelector('#pilotStatus').innerHTML = `Pilot ${pilot} is ready for launch`;
+    documentt.querySelector('#copilotStatus').innerHTML = `Co-pilot ${copilot} is ready for launch`;
+
 
     if (validateInput(fuelLevel) !== "Is a number") {
         alert("Fuel level is not a number")
@@ -85,7 +88,7 @@ function formSubmission(documentt, list, pilot, copilot, fuelLevel, cargoLevel) 
 
     if (cargoLevel > 10000) {
         documentt.querySelector("#faultyItems").style.visibility = "visible"
-        documentt.querySelector('#cargoStatus').innerHTML = "Cargo Mass too high"
+        documentt.querySelector('#cargoStatus').innerHTML = "Cargo mass too heavy for launch"
         documentt.querySelector("#launchStatus").innerHTML = "SHUTTLE NOT READY FOR LAUNCH";
         documentt.querySelector("#launchStatus").style.color = "red";
         return
@@ -96,11 +99,9 @@ function formSubmission(documentt, list, pilot, copilot, fuelLevel, cargoLevel) 
     documentt.querySelector("#launchStatus").innerHTML = "Shuttle ready for launch";
     documentt.querySelector("#launchStatus").style.color = "green";
 
-    documentt.querySelector("#faultyItems").style.visibility = "hidden"
+    //documentt.querySelector("#faultyItems").style.visibility = "hidden"
 
-    documentt.querySelector('#pilotStatus').innerHTML = `Pilot ${pilot} is ready for launch`;
-    documentt.querySelector('#copilotStatus').innerHTML = `Co-pilot ${copilot} is ready for launch`;
-
+    
 
     console.log("after checks")
 
