@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
 
             console.log(planet)
 
-            addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.imageUrl)
+            addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.image)
         })
     })
 
