@@ -78,8 +78,8 @@ function formSubmission(documentt, list, pilot, copilot, fuelLevel, cargoLevel) 
 
     if (fuelLevel < 10000) {
         documentt.querySelector("#faultyItems").style.visibility = "visible"
-        documentt.querySelector('#fuelStatus').innerHTML = "Not enough fuel for launch"
-        documentt.querySelector("#launchStatus").innerHTML = "SHUTTLE NOT READY FOR LAUNCH";
+        documentt.querySelector('#fuelStatus').innerHTML = "Fuel level too low for launch"
+        documentt.querySelector("#launchStatus").innerHTML = "Shuttle Not Ready for Launch";
         documentt.querySelector("#launchStatus").style.color = "red";
         return
         //event.preventDefault();
@@ -89,7 +89,7 @@ function formSubmission(documentt, list, pilot, copilot, fuelLevel, cargoLevel) 
     if (cargoLevel > 10000) {
         documentt.querySelector("#faultyItems").style.visibility = "visible"
         documentt.querySelector('#cargoStatus').innerHTML = "Cargo mass too heavy for launch"
-        documentt.querySelector("#launchStatus").innerHTML = "SHUTTLE NOT READY FOR LAUNCH";
+        documentt.querySelector("#launchStatus").innerHTML = "Shuttle Not Ready for Launch";
         documentt.querySelector("#launchStatus").style.color = "red";
         return
         //event.preventDefault();
