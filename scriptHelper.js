@@ -33,10 +33,10 @@ function validateInput(testInput) {
         return "Empty"
     }
     if (isNaN(testInput)) {
-        return "Not a number"
+        return "Not a Number"
     }
     if (!isNaN(testInput)) {
-        return "Is a number"
+        return "Is a Number"
     }
 }
 
@@ -47,13 +47,13 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         return; // return are to avoid alert spam
     }
 
-    if (validateInput(pilot) !== "Not a number") {
+    if (validateInput(pilot) !== "Not a Number") {
         alert("Pilot Name is a number")
         event.preventDefault();
         return;
     }
 
-    if (validateInput(copilot) !== "Not a number") {
+    if (validateInput(copilot) !== "Not a Number") {
         alert("Co-Pilot Name is a number")
         event.preventDefault();
         return;
@@ -62,14 +62,14 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     document.querySelector('#copilotStatus').innerHTML = `Co-pilot ${copilot} is ready for launch`;
 
 
-    if (validateInput(fuelLevel) !== "Is a number") {
+    if (validateInput(fuelLevel) !== "Is a Number") {
         alert("Fuel level is not a number")
         event.preventDefault();
         return;
     }
 
 
-    if (validateInput(cargoLevel) !== "Is a number") {
+    if (validateInput(cargoLevel) !== "Is a Number") {
         alert("Caro Mass is not a number")
         event.preventDefault();
         return;
