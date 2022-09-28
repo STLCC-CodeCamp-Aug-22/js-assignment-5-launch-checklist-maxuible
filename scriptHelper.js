@@ -82,7 +82,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         document.querySelector("#launchStatus").innerHTML = "Shuttle Not Ready for Launch";
         document.querySelector("#launchStatus").style.color = "rgb(199, 37, 78)";
         
-        //event.preventDefault();
+        event.preventDefault();
+        return;
 
     }
 
@@ -92,8 +93,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         document.querySelector("#launchStatus").innerHTML = "Shuttle Not Ready for Launch";
         document.querySelector("#launchStatus").style.color = "rgb(199, 37, 78)";
         
-        //event.preventDefault();
-
+        event.preventDefault();
+        return;
     }
 
     document.querySelector("#launchStatus").innerHTML = "Shuttle ready for launch";
